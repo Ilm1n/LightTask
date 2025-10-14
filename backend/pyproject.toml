@@ -11,3 +11,8 @@ dependencies = [
     "pydantic-settings>=2.11.0",
     "sqlalchemy[asyncio]>=2.0.44",
 ]
+
+[dependency-groups]
+dev = [
+    "black>=25.9.0",
+]

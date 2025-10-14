@@ -148,6 +148,7 @@ activemq-data/
 *.sage.py
 
 # Environments
+LightTaskApp/.env
 .env
 .envrc
 .venv

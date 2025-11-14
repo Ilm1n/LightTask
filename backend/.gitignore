@@ -148,8 +148,8 @@ activemq-data/
 *.sage.py
 
 # Environments
-src/.env
 .env
+src/.env
 .envrc
 .venv
 env/

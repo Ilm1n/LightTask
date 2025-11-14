@@ -83,7 +83,7 @@ async def run_async_migrations() -> None:
 
 def run_migrations_online() -> None:
     """Run migrations in 'online' mode."""
-
+    print(f"=== USING DATABASE_URL: {settings.db.url} ===")
     asyncio.run(run_async_migrations())
 
 

@@ -13,17 +13,17 @@ services:
   #     - rabbitmq-data:/var/lib/rabbitmq
 
   pg:
-    image: postgres:latest
+    image: postgres:15
     environment:
-      POSTGRES_DB: shop
-      POSTGRES_USER: user
-      POSTGRES_PASSWORD: password
+      POSTGRES_DB: Lighttask
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
     ports:
-      - "5433:5432"
+      - "5432:5432"
     volumes:
       - pgdata:/var/lib/postgresql/data
     healthcheck:
-      test: [ "CMD-SHELL", "pg_isready -U user -d shop" ]
+      test: [ "CMD-SHELL", "pg_isready -U postgres -d Lighttask" ]
       interval: 5s
       timeout: 3s
       retries: 3

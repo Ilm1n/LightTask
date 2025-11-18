@@ -7,7 +7,7 @@ class UserBase(BaseModel):
     bar: int
 
 
-class UserCreate(BaseModel):
+class UserCreate(UserBase):
     pass
 
 

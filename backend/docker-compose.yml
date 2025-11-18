@@ -47,11 +47,6 @@ services:
   #   ports:
   #     - "4222:4222"
 
-  # adminer:
-  #   image: adminer
-  #   ports:
-  #     - "8081:8080"
-
   # pgadmin:
   #   image: dpage/pgadmin4
   #   environment:
@@ -64,4 +59,4 @@ services:
 
 volumes:
   pgdata:
-  rabbitmq-data:
+#  rabbitmq-data:

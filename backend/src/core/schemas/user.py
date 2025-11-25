@@ -1,4 +1,4 @@
-from pydantic import BaseModel
+from pydantic import BaseModel, EmailStr
 
 
 class UserBase(BaseModel):
@@ -13,3 +13,10 @@ class UserCreate(UserBase):
 
 class UserRead(UserBase):
     id: int
+
+
+class UserDemoAuthSchema(BaseModel):
+    username: str
+    password: bytes
+    email: EmailStr | None = None
+    is_active: bool = True

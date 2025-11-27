@@ -20,7 +20,9 @@ def encode_jwt(
     else:
         expire = now + timedelta(minutes=expire_minutes)
 
-    to_encode.update(exp=expire, iat=now,)
+    import uuid
+
+    to_encode.update(exp=expire, iat=now, jti=str(uuid.uuid4()))
     encoded = jwt.encode(
         to_encode,
         private_key,

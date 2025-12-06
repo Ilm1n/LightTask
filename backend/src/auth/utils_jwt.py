@@ -1,7 +1,8 @@
 from datetime import datetime, UTC, timedelta
 
 import jwt
-from core.config import settings
+import uuid
+from config import settings
 import bcrypt
 
 
@@ -19,8 +20,6 @@ def encode_jwt(
         expire = now + expire_timedelta
     else:
         expire = now + timedelta(minutes=expire_minutes)
-
-    import uuid
 
     to_encode.update(exp=expire, iat=now, jti=str(uuid.uuid4()))
     encoded = jwt.encode(

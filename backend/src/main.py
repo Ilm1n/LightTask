@@ -6,7 +6,7 @@ from fastapi import FastAPI
 from fastapi.responses import ORJSONResponse
 
 from core.models import db_helper
-from core.config import settings
+from config import settings
 
 from api import router as api_router
 

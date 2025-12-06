@@ -2,7 +2,7 @@ from datetime import timedelta
 
 from core.schemas.user import UserDemoAuthSchema
 from auth import utils_jwt as auth_utils
-from core.config import settings
+from config import settings
 
 TOKEN_TYPE_FIELD = "type"
 ACCESS_TOKEN_TYPE = "acess"
